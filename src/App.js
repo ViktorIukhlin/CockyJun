@@ -1,26 +1,20 @@
-import logo from './logo.svg';
-import './App.scss';
+import React from 'react';
+import { Route, HashRouter, Redirect } from 'react-router-dom';
 import style from './App.scss';
+import EndPage from './components/EndPage/EndPage';
+import QuestionsPage from './components/QuestionsPage/QuestionsPage';
+import StartPage from './components/StartPage/StartPage';
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <div className={style.privet}>ПРивет</div>
-      </header>
-    </div>
+    <HashRouter>
+      <div className='wrapper'> 
+        <Redirect from='/' to='/startPage'/>
+        <Route exact path='/startPage' render={ () => <StartPage />} />
+        <Route exact path='/questionsPage' render={ () => <QuestionsPage state={props.store.getState().questionsPage}/>} />
+        <Route exact path='/endPage' render={ () => <EndPage state={props.store.getState().questionsPage}/>} />
+      </div>
+    </HashRouter>
   );
 }
 
