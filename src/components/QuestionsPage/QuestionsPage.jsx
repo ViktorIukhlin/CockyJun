@@ -9,7 +9,7 @@ const QuestionsPage = ({state}) => {
   
   if(counter === state.numberOfQuestions){
     return <div>
-      ты тыкал {counter} раз
+      Ты ответил на {counter} вопроса , поздравляю 
       <NavLink to='/startPage'> Заново </NavLink>
     </div>
   }
