@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/CockyJun/static/css/main.b33d639d.chunk.css",
+    "main.js": "/CockyJun/static/js/main.af7fb28a.chunk.js",
+    "main.js.map": "/CockyJun/static/js/main.af7fb28a.chunk.js.map",
+    "runtime-main.js": "/CockyJun/static/js/runtime-main.73870e98.js",
+    "runtime-main.js.map": "/CockyJun/static/js/runtime-main.73870e98.js.map",
+    "static/js/2.82416763.chunk.js": "/CockyJun/static/js/2.82416763.chunk.js",
+    "static/js/2.82416763.chunk.js.map": "/CockyJun/static/js/2.82416763.chunk.js.map",
+    "index.html": "/CockyJun/index.html",
+    "static/css/main.b33d639d.chunk.css.map": "/CockyJun/static/css/main.b33d639d.chunk.css.map",
+    "static/js/2.82416763.chunk.js.LICENSE.txt": "/CockyJun/static/js/2.82416763.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.73870e98.js",
+    "static/js/2.82416763.chunk.js",
+    "static/css/main.b33d639d.chunk.css",
+    "static/js/main.af7fb28a.chunk.js"
+  ]
+}
