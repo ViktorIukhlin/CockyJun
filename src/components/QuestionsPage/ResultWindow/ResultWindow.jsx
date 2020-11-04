@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './ResultWindow.module.scss'
 
-const ResultWindow = ({answer, rightAnswer, nextQuestion}) => {
+const ResultWindow = ({answer, rightAnswer,  nextQuestionTrue, nextQuestionFalse}) => {
   const bool = answer === rightAnswer;
   return (
     <div className={style.container} style={bool ? {border: "#DCF5EB solid 5px"} : {border: "#FCE4DF solid 5px"}}>
@@ -15,7 +15,7 @@ const ResultWindow = ({answer, rightAnswer, nextQuestion}) => {
           <div className={style.answer}>{rightAnswer}</div>
         </div>
       )}
-      <button onClick={nextQuestion}>Следующий вопрос</button>
+      <button onClick={bool ? nextQuestionTrue : nextQuestionFalse}>Далее</button>
     </div>
   )
 }

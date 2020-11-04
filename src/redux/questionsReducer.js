@@ -2,10 +2,10 @@ const SET_QUESTION = 'NEXT_QUESTION';
 
 let initialState = {
   questions: [
-    { question: 'Кто ты такой 1?', questionImg: '', answers: ['Верно1', 'Миша', 'Витя', 'Олег'], correctAnswer: 'Верно1'},
-    { question: 'Кто ты такой 2?', questionImg: '', answers: ['Верно2', '2', '3', '4'], correctAnswer: 'Верно2'},
-    { question: 'Кто вы такие 3?', questionImg: '', answers: ['Верно3', 'Миша', 'Витя', 'Рома'], correctAnswer: 'Верно3'},
-    { question: 'Кто ты такой 4?', questionImg: '', answers: ['Верно4', '2', '3', '4'], correctAnswer: 'Верно4'}
+    { question: 'Сколько будет 2 + 2?', questionImg: '', answers: ['2', '22', '4', '6'], correctAnswer: '22'},
+    { question: 'Самый лучший язык программирования?', questionImg: '', answers: ['JavaScript', 'C#', 'Payton', 'Kotlin'], correctAnswer: 'JavaScript'},
+    { question: 'Где лучше работать?', questionImg: '', answers: ['Завод', 'IT', 'Продажи', 'Пятерочка'], correctAnswer: 'Пятерочка'},
+    { question: 'Лучшая профессия на сегодня?', questionImg: '', answers: ['Фрезеровщик', 'Токарь', 'IT специалист', 'Продавец в пятерочке'], correctAnswer: 'Продавец в пятерочке'}
   ]
 };
 

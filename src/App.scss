@@ -371,7 +371,7 @@ textarea {
 /* END FONTS */
 
 html {
-	box-sizing: border-box;
+    box-sizing: border-box;
 } 
 
 *,
@@ -395,7 +395,7 @@ a {
 }
 
 .wrapper{
-  width: 720px;
+  max-width: 720px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
