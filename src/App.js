@@ -9,7 +9,7 @@ function App(props) {
   return (
     <HashRouter>
       <div className='wrapper'> 
-        {/* <Redirect from='/' to='/startPage'/> */}
+        <Redirect from='/' to='/startPage'/>
         <Route exact path='/startPage' render={ () => <StartPage />} />
         <Route exact path='/questionsPage' render={ () => 
           <QuestionsPage listOfQuestions={props.store.getState().questionsPage.questions.sort(() => Math.random() - 0.5,)}/>} 

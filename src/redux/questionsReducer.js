@@ -3,7 +3,7 @@ const SET_QUESTION = 'NEXT_QUESTION';
 let initialState = {
   questions: [
     { question: 'Сколько будет 2 + 2?', questionImg: '', answers: ['2', '22', '4', '6'], correctAnswer: '22'},
-    { question: 'Самый лучший язык программирования?', questionImg: '', answers: ['JavaScript', 'C#', 'Payton', 'Kotlin'], correctAnswer: 'JavaScript'},
+    { question: 'Самый лучший язык программирования?', questionImg: '', answers: ['JavaScript', 'C#', 'Python', 'Kotlin'], correctAnswer: 'JavaScript'},
     { question: 'Где лучше работать?', questionImg: '', answers: ['Завод', 'IT', 'Продажи', 'Пятерочка'], correctAnswer: 'Пятерочка'},
     { question: 'Лучшая профессия на сегодня?', questionImg: '', answers: ['Фрезеровщик', 'Токарь', 'IT специалист', 'Продавец в пятерочке'], correctAnswer: 'Продавец в пятерочке'}
   ]
