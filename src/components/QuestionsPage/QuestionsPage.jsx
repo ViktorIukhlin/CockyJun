@@ -1,38 +1,40 @@
-import React, { useState } from 'react';
-import { NavLink, Redirect } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { NavLink, Redirect } from 'react-router-dom'
+import Question from './Question/Question'
 import style from './QuestionsPage.module.scss'
+import ResultWindow from './ResultWindow/ResultWindow'
 
-const QuestionsPage = ({state}) => {
-  const arrQuestions = state.questions.sort(() => Math.random() - 0.5);
-  state.numberOfQuestions = arrQuestions.length;
-  const [counter, setCounter] = useState(state.counter);
-  
-  if(counter === state.numberOfQuestions){
-    return <div>
-      Ты ответил на {counter} вопроса , поздравляю 
-      <NavLink to='/startPage'> Заново </NavLink>
-    </div>
+const QuestionsPage = ({ listOfQuestions }) => {
+  const [answers, setAnswers] = useState(listOfQuestions);
+  const [counter, setCounter] = useState(0);
+  const [resultWindow, setResultWindow] = useState(false);
+  const [answerFromPlayer, setAnswerFromPlayer] = useState('');
+  // useEffect(() => {
+  //   console.log(answers)
+  //   console.log('RANDOM')
+  // }, []);
+  const sendAnswers = (e) => {
+    setAnswerFromPlayer(e.target.defaultValue)
+    setResultWindow(true)
   }
-
-  const question = state.questions[counter].question
-  const answers = state.questions[counter].answers.sort(() => Math.random() - 0.5);
-
-  const sendAnswers = () => {
+  const nextQuestion = () => {
     setCounter(counter + 1)
+    setResultWindow(false)
   }
   return (
     <div className={style.container}>
-    <div className={style.question}>
-      <div>{question}</div>
+      {counter === answers.length ? (
+        <div>
+          Ты ответил на {counter} вопроса , поздравляю
+          <NavLink to="/startPage"> Заново </NavLink>
+        </div>
+      ): resultWindow ? (
+        <ResultWindow answer={answerFromPlayer} rightAnswer={answers[counter].correctAnswer} nextQuestion={nextQuestion}/>
+      ) : (
+        <Question sendAnswers={sendAnswers} answer={answers[counter]}/>
+      )}
     </div>
-    <form className={style.boxForAnswer}>
-      <input type="button" className={style.answer} onClick={sendAnswers} value={answers[0]}/>
-      <input type="button" className={style.answer} onClick={sendAnswers} value={answers[1]}/>
-      <input type="button" className={style.answer} onClick={sendAnswers} value={answers[2]}/>
-      <input type="button" className={style.answer} onClick={sendAnswers} value={answers[3]}/>
-    </form>
-  </div>
   )
 }
 
-export default QuestionsPage;
+export default QuestionsPage
