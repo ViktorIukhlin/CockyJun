@@ -17,6 +17,10 @@
     align-items: center;
     justify-content: center;
     margin: 0 20px 40px 20px;
+    &:hover{
+      color: #2587E8;
+      background-color: #EBF4FD;
+    }
   }
   .result{
     display: flex;
