@@ -1,49 +1,40 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Question from "./Question/Question";
 import style from "./QuestionsPage.module.scss";
 import ResultWindow from "./ResultWindow/ResultWindow";
 
-const QuestionsPage = ({ listOfQuestions }) => {
-  const [state, setState] = useState(listOfQuestions);
+const QuestionsPage = ({ state, countTimer}) => {
   const [counter, setCounter] = useState(0);
   const [resultWindow, setResultWindow] = useState(false);
   const [answerFromPlayer, setAnswerFromPlayer] = useState("");
   const [wrongAnswer, setWrongAnswer] = useState(0);
-  let countTimer = 10;
   const [timer, setTimer] = useState(countTimer);
   const [timeOff, setTimeOff] = useState(false)
 
-  const [question, setQuestion] = useState(0);
-  const [answersRandom, setAnswersRandom] = useState(0);
-
-
+  const [question, setQuestion] = useState('');
+  const [answersRandom, setAnswersRandom] = useState([]);
 
   useEffect(() => {
-    if (counter === state.length) return;
+    if(timer !== 0) {
+      const localTimer = setTimeout(() => {
+        setTimer(timer - 1);
+      }, 1000);
+      return () => clearTimeout(localTimer);
+    }
+    setTimeOff(true)
+  }, [timer]);
+
+  useEffect(() => {
+    if (counter === state.length) return () => {};
     setAnswersRandom(state[counter].answers.sort(() => Math.random() - 0.5));
     setQuestion(state[counter].question);
     setTimer(countTimer);
-  }, [counter]);
-
-  useEffect(() => {}, []);
-
-  useEffect(() => {
-    if (!resultWindow ){
-      timer !== 0 ? (
-        setTimeout(() => {
-          setTimer(timer - 1);
-        }, 1000)
-      ) : (
-        setTimeOff(true)
-      )
-    }else{
-      return false
-    }  
-  }, [timer]);
+  }, [counter, countTimer, state]);
 
   const sendAnswers = (e) => {
-    setAnswerFromPlayer(e.target.defaultValue);
+    console.log(e)
+    setAnswerFromPlayer(e.target.outerText);
     setResultWindow(true);
   };
   const nextQuestionTrue = () => {
