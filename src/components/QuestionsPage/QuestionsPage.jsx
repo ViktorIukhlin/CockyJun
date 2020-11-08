@@ -4,7 +4,7 @@ import Question from "./Question/Question";
 import style from "./QuestionsPage.module.scss";
 import ResultWindow from "./ResultWindow/ResultWindow";
 
-const QuestionsPage = ({ state, countTimer}) => {
+const QuestionsPage = ({ state, countTimer, timerOn}) => {
   const [counter, setCounter] = useState(0);
   const [resultWindow, setResultWindow] = useState(false);
   const [answerFromPlayer, setAnswerFromPlayer] = useState("");
@@ -16,6 +16,7 @@ const QuestionsPage = ({ state, countTimer}) => {
   const [answersRandom, setAnswersRandom] = useState([]);
 
   useEffect(() => {
+    if(!timerOn) return 
     if(timer !== 0) {
       const localTimer = setTimeout(() => {
         setTimer(timer - 1);
@@ -23,7 +24,7 @@ const QuestionsPage = ({ state, countTimer}) => {
       return () => clearTimeout(localTimer);
     }
     setTimeOff(true)
-  }, [timer]);
+  }, [timer, timerOn]);
 
   useEffect(() => {
     if (counter === state.length) return () => {};
@@ -33,7 +34,6 @@ const QuestionsPage = ({ state, countTimer}) => {
   }, [counter, countTimer, state]);
 
   const sendAnswers = (e) => {
-    console.log(e)
     setAnswerFromPlayer(e.target.outerText);
     setResultWindow(true);
   };
@@ -60,7 +60,7 @@ const QuestionsPage = ({ state, countTimer}) => {
   };
 
   return (
-    <div className={style.container}>
+    <>
       {counter === state.length ? (
         <div className={style.containerCopy}>
           Правильных ответов {counter - wrongAnswer} из {counter}
@@ -72,7 +72,7 @@ const QuestionsPage = ({ state, countTimer}) => {
         showResultWindow()
       ) : (
         <>
-           {timer && 
+           {timerOn && 
            <div className={style.timer} style={timer < 5 ? {color: '#EE593B'} : {}}>
             {timer >= 10 ? `00:${timer}` : `00:0${timer}`}
            </div>}
@@ -83,7 +83,7 @@ const QuestionsPage = ({ state, countTimer}) => {
           />
         </>
       )}
-    </div>
+    </>
   );
 };
 
