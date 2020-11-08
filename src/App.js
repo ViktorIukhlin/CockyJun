@@ -8,7 +8,7 @@ import StartPage from './components/StartPage/StartPage';
 function App(props) {
   return (
     <HashRouter>
-      <div className='wrapper'> 
+      <div className='wrapper'>
         <Redirect from='/' to='/startPage'/>
         <Route exact path='/startPage' render={ () => <StartPage />} />
         <Route exact path='/questionsPage' render={ () => 

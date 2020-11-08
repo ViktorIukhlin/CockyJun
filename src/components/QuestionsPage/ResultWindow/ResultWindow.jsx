@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './ResultWindow.module.scss'
 
-const ResultWindow = ({answer, rightAnswer,  nextQuestionTrue, nextQuestionFalse}) => {
+const ResultWindow = ({answer, rightAnswer, timeOff, nextQuestionTrue, nextQuestionFalse}) => {
   const bool = answer === rightAnswer;
   return (
     <div className={style.container} style={bool ? {border: "#DCF5EB solid 5px"} : {border: "#FCE4DF solid 5px"}}>
@@ -11,7 +11,9 @@ const ResultWindow = ({answer, rightAnswer,  nextQuestionTrue, nextQuestionFalse
         </div>
       ) : (
         <div className={style.result} style={{color: '#EE593B'}}>
-          <div className={style.message}>Вы ответили неверно! Правильный ответ:</div>
+          {timeOff 
+          ? <div className={style.message}>Время вышло! Правильный ответ:</div> 
+          : <div className={style.message}>Вы ответили неверно! Правильный ответ:</div>} 
           <div className={style.answer}>{rightAnswer}</div>
         </div>
       )}
