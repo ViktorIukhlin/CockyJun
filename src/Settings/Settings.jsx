@@ -1,19 +1,11 @@
 import React from "react";
 import style from "./Settings.module.scss";
 
-const Settings = ({ setTimer }) => {
+const Settings = ({changeTimer, timerOn}) => {
   return (
     <div className={style.container}>
-      {/* <label>
-        Пойдут:
-        <input
-          name="isGoing"
-          type="checkbox"
-          // checked={true}
-          // onChange={}
-        />
-      </label> */}
-      Settings
+      Время
+      <button className={style.answer} onClick={changeTimer}> {timerOn ? "ВЫКЛЮЧИТЬ" : "ВКЛЮЧИТЬ"} </button>
     </div>
   );
 };

@@ -7,12 +7,16 @@ import StartPage from './components/StartPage/StartPage';
 function App(props) {
   const [amountOfTime, setAmountOfTime] = useState(10)
   const [timerOn, setTimerOn] = useState(true)
+  const changeTimer = () => {
+    console.log('dsds')
+    timerOn ? setTimerOn(false) : setTimerOn(true)
+  }
   return (
     <HashRouter>
       <div className='wrapper'>
         <div className='container'>
           <Redirect from='/' to='/startPage'/>
-          <Route exact path='/startPage' render={ () => <StartPage />} />
+          <Route exact path='/startPage' render={ () => <StartPage changeTimer={changeTimer} timerOn={timerOn}/>} />
           <Route exact path='/questionsPage' render={ () => 
             <QuestionsPage 
             state={props.store.getState().questionsPage.questions.sort(() => Math.random() - 0.5,)}
