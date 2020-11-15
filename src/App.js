@@ -3,12 +3,12 @@ import { Route, HashRouter, Redirect } from 'react-router-dom';
 import './App.scss';
 import QuestionsPage from './components/QuestionsPage/QuestionsPage';
 import StartPage from './components/StartPage/StartPage';
+import store from './JSON/bd.json'
 
-function App(props) {
+function App() {
   const [amountOfTime, setAmountOfTime] = useState(10)
   const [timerOn, setTimerOn] = useState(true)
   const changeTimer = () => {
-    console.log('dsds')
     timerOn ? setTimerOn(false) : setTimerOn(true)
   }
   return (
@@ -19,7 +19,7 @@ function App(props) {
           <Route exact path='/startPage' render={ () => <StartPage changeTimer={changeTimer} timerOn={timerOn}/>} />
           <Route exact path='/questionsPage' render={ () => 
             <QuestionsPage 
-            state={props.store.getState().questionsPage.questions.sort(() => Math.random() - 0.5,)}
+            state={store.questions.sort(() => Math.random() - 0.5,)}
             countTimer={amountOfTime}
             timerOn={timerOn}
             />} 

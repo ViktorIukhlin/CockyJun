@@ -1,0 +1,28 @@
+{
+    "questions": [
+        {   "id": 0,
+            "question": "Сколько будет 2 + 2?", 
+            "questionImg": "", 
+            "answers": ["2", "22", "4", "6"], 
+            "correctAnswer": "22"
+        },
+        {   "id": 1,
+            "question": "Самый лучший язык программирования?", 
+            "questionImg": "", 
+            "answers": ["JavaScript", "C#", "Python", "Kotlin"], 
+            "correctAnswer": "JavaScript"
+        },
+        {   "id": 2,
+            "question": "Где лучше работать?", 
+            "questionImg": "", 
+            "answers": ["Завод", "IT", "Продажи", "Пятерочка"], 
+            "correctAnswer": "Пятерочка"
+        },
+        {   "id": 3,
+            "question": "Лучшая профессия на сегодня?", 
+            "questionImg": "", 
+            "answers": ["Фрезеровщик", "Токарь", "IT специалист", "Продавец в пятерочке"], 
+            "correctAnswer": "Продавец в пятерочке"
+        }
+    ]
+}
