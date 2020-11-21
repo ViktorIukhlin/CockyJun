@@ -1,31 +1,3 @@
-.containerCopy{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 22px;
-  line-height: 30px;
-  height: 100%;
-}
-.buttonReturn{
-  height: auto;
-  min-height: 40px;
-  min-width: 120px;
-  padding: 2px 8px;
-  color: #37383c;
-  font-size: 14px;
-  border-radius: 4px;
-  border: 1px solid #e6e9ee;
-  background-color: #f4f6f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 20px 40px 20px;
-  &:hover{
-    color: #2587E8;
-    background-color: #EBF4FD;
-  }
-}
 .timer{
   height: 0;
   position: relative;
