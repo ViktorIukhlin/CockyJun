@@ -1,8 +1,8 @@
 {
     "questions": [
         {   "id": 0,
-            "question": "Сколько будет 2 + 2?", 
-            "questionImg": "", 
+            "question": "", 
+            "questionImg": "1.jpg", 
             "answers": ["2", "22", "4", "6"], 
             "correctAnswer": "22"
         },

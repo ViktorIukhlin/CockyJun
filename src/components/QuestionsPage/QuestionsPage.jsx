@@ -13,6 +13,7 @@ const QuestionsPage = ({ state, countTimer, timerOn}) => {
   const [timeOff, setTimeOff] = useState(false)
 
   const [question, setQuestion] = useState('');
+  const [questionImg, setQuestionImg] = useState('');
   const [answersRandom, setAnswersRandom] = useState([]);
 
   useEffect(() => {
@@ -30,6 +31,7 @@ const QuestionsPage = ({ state, countTimer, timerOn}) => {
     if (counter === state.length) return () => {};
     setAnswersRandom(state[counter].answers.sort(() => Math.random() - 0.5));
     setQuestion(state[counter].question);
+    setQuestionImg(state[counter].questionImg);
     setTimer(countTimer);
   }, [counter, countTimer, state]);
 
@@ -80,6 +82,7 @@ const QuestionsPage = ({ state, countTimer, timerOn}) => {
             sendAnswers={sendAnswers}
             answers={answersRandom}
             question={question}
+            questionImg={questionImg}
           />
         </>
       )}
