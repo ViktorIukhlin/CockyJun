@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/CockyJun/static/css/main.58e8ee88.chunk.css",
-    "main.js": "/CockyJun/static/js/main.0e9948d2.chunk.js",
-    "main.js.map": "/CockyJun/static/js/main.0e9948d2.chunk.js.map",
+    "main.js": "/CockyJun/static/js/main.1aeeaf23.chunk.js",
+    "main.js.map": "/CockyJun/static/js/main.1aeeaf23.chunk.js.map",
     "runtime-main.js": "/CockyJun/static/js/runtime-main.19602e9c.js",
     "runtime-main.js.map": "/CockyJun/static/js/runtime-main.19602e9c.js.map",
-    "static/js/2.69cb24aa.chunk.js": "/CockyJun/static/js/2.69cb24aa.chunk.js",
-    "static/js/2.69cb24aa.chunk.js.map": "/CockyJun/static/js/2.69cb24aa.chunk.js.map",
+    "static/js/2.c96d0c16.chunk.js": "/CockyJun/static/js/2.c96d0c16.chunk.js",
+    "static/js/2.c96d0c16.chunk.js.map": "/CockyJun/static/js/2.c96d0c16.chunk.js.map",
     "index.html": "/CockyJun/index.html",
     "static/css/main.58e8ee88.chunk.css.map": "/CockyJun/static/css/main.58e8ee88.chunk.css.map",
-    "static/js/2.69cb24aa.chunk.js.LICENSE.txt": "/CockyJun/static/js/2.69cb24aa.chunk.js.LICENSE.txt"
+    "static/js/2.c96d0c16.chunk.js.LICENSE.txt": "/CockyJun/static/js/2.c96d0c16.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.19602e9c.js",
-    "static/js/2.69cb24aa.chunk.js",
+    "static/js/2.c96d0c16.chunk.js",
     "static/css/main.58e8ee88.chunk.css",
-    "static/js/main.0e9948d2.chunk.js"
+    "static/js/main.1aeeaf23.chunk.js"
   ]
 }
