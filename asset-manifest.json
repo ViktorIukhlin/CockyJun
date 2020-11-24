@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/CockyJun/static/css/main.d54d7a87.chunk.css",
-    "main.js": "/CockyJun/static/js/main.9f8fda7d.chunk.js",
-    "main.js.map": "/CockyJun/static/js/main.9f8fda7d.chunk.js.map",
-    "runtime-main.js": "/CockyJun/static/js/runtime-main.73870e98.js",
-    "runtime-main.js.map": "/CockyJun/static/js/runtime-main.73870e98.js.map",
-    "static/js/2.fb55368b.chunk.js": "/CockyJun/static/js/2.fb55368b.chunk.js",
-    "static/js/2.fb55368b.chunk.js.map": "/CockyJun/static/js/2.fb55368b.chunk.js.map",
+    "main.css": "/CockyJun/static/css/main.58e8ee88.chunk.css",
+    "main.js": "/CockyJun/static/js/main.0e9948d2.chunk.js",
+    "main.js.map": "/CockyJun/static/js/main.0e9948d2.chunk.js.map",
+    "runtime-main.js": "/CockyJun/static/js/runtime-main.19602e9c.js",
+    "runtime-main.js.map": "/CockyJun/static/js/runtime-main.19602e9c.js.map",
+    "static/js/2.69cb24aa.chunk.js": "/CockyJun/static/js/2.69cb24aa.chunk.js",
+    "static/js/2.69cb24aa.chunk.js.map": "/CockyJun/static/js/2.69cb24aa.chunk.js.map",
     "index.html": "/CockyJun/index.html",
-    "static/css/main.d54d7a87.chunk.css.map": "/CockyJun/static/css/main.d54d7a87.chunk.css.map",
-    "static/js/2.fb55368b.chunk.js.LICENSE.txt": "/CockyJun/static/js/2.fb55368b.chunk.js.LICENSE.txt"
+    "static/css/main.58e8ee88.chunk.css.map": "/CockyJun/static/css/main.58e8ee88.chunk.css.map",
+    "static/js/2.69cb24aa.chunk.js.LICENSE.txt": "/CockyJun/static/js/2.69cb24aa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.73870e98.js",
-    "static/js/2.fb55368b.chunk.js",
-    "static/css/main.d54d7a87.chunk.css",
-    "static/js/main.9f8fda7d.chunk.js"
+    "static/js/runtime-main.19602e9c.js",
+    "static/js/2.69cb24aa.chunk.js",
+    "static/css/main.58e8ee88.chunk.css",
+    "static/js/main.0e9948d2.chunk.js"
   ]
 }
