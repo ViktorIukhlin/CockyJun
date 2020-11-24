@@ -39,15 +39,16 @@ const QuestionsPage = ({ state, countTimer, timerOn }) => {
     }, [counter, countTimer, state]);
 
     const sendAnswers = (e) => {
-        setCounter(counter + 1);
         setAnswerFromPlayer(e.target.outerText);
         setResultWindow(true);
     };
     const nextQuestionTrue = () => {
+        setCounter(counter + 1);
         setTimeOff(false);
         setResultWindow(false);
     };
     const nextQuestionFalse = () => {
+        setCounter(counter + 1);
         setTimeOff(false);
         setWrongAnswers(wrongAnswers + 1);
         setResultWindow(false);
