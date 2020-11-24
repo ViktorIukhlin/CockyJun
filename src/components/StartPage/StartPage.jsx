@@ -24,9 +24,9 @@ const StartPage = ({ changeTimer, timerOn }) => {
                     START
                 </button>
             </NavLink>
-            <button className={style.button} onClick={goToDataBase}>
+            {/* <button className={style.button} onClick={goToDataBase}>
                 DATABASE
-            </button>
+            </button> */}
         </div>
     );
 };
