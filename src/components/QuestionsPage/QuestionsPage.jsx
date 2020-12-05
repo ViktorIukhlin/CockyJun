@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import EndPage from './EndPage/EndPage'
 import ProgressBar from './ProgressBar/ProgressBar'
 import Question from './Question/Question'

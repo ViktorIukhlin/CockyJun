@@ -1,21 +1,26 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import Settings from "../../Settings/Settings";
-import style from "./StartPage.module.scss";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import Settings from '../../Settings/Settings'
+import style from './StartPage.module.scss'
 
-import { Question } from "../../JSON/db";
+import { Question, addDateToLocalStorage, getDateFromLocalStorage } from '../../api/api'
 
 const StartPage = ({ changeTimer, timerOn }) => {
+    const localStorage = getDateFromLocalStorage()
     const question = {
-        text: "Privet",
-        date: "01.01.2001",
-    };
-    const goToDataBase = (e) => {
-        e.preventDefault();
-        Question.create(question).then(() => {
-            console.log("finished");
-        });
-    };
+        text: 'Privet',
+        date: new Date().toLocaleDateString(),
+        time: new Date().toLocaleTimeString(),
+        sex: 'net'
+    }
+    const goToDataBase = e => {
+        e.preventDefault()
+        addDateToLocalStorage(question)
+        // Question.create(question).then(() => {
+        //     console.log('finished')
+        // })
+    }
+    console.log('localStorage', localStorage)
     return (
         <div className={style.container}>
             <Settings changeTimer={changeTimer} timerOn={timerOn} />
@@ -28,7 +33,7 @@ const StartPage = ({ changeTimer, timerOn }) => {
                 DATABASE
             </button> */}
         </div>
-    );
-};
+    )
+}
 
-export default StartPage;
+export default StartPage
