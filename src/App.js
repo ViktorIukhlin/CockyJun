@@ -6,7 +6,7 @@ import StartPage from './components/StartPage/StartPage';
 import store from './JSON/bd.json'
 
 function App() {
-  const [amountOfTime, setAmountOfTime] = useState(3)
+  const [amountOfTime, setAmountOfTime] = useState(6)
   const [timerOn, setTimerOn] = useState(true)
   const changeTimer = () => {
     timerOn ? setTimerOn(false) : setTimerOn(true)

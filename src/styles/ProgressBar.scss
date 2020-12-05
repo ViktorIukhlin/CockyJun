@@ -1,0 +1,13 @@
+.progressBar{
+     height: 2%;
+    &__scale{
+        height: 100%;
+        color: #fff;
+        background-color: #20A0FF;
+        transition: 1s;
+        padding-left: 1px;
+        & p {
+            margin-left: 10px;
+        }
+    }
+}

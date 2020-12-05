@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import EndPage from './EndPage/EndPage'
+import ProgressBar from './ProgressBar/ProgressBar'
 import Question from './Question/Question'
 import style from './QuestionsPage.module.scss'
 import ResultWindow from './ResultWindow/ResultWindow'
@@ -48,9 +49,9 @@ const QuestionsPage = ({ state, countTimer, timerOn }) => {
         !bool && setWrongAnswers(wrongAnswers + 1)
         setResultWindow(false)
     }
-    console.log(counter)
     return (
         <>
+            <ProgressBar currentSize={allQuestions} size={state.length} />
             {allQuestions === state.length ? (
                 <EndPage counter={allQuestions} wrongAnswers={wrongAnswers} />
             ) : resultWindow || timeOff ? (
@@ -63,7 +64,7 @@ const QuestionsPage = ({ state, countTimer, timerOn }) => {
             ) : (
                 <>
                     {timerOn && (
-                        <div className={style.timer} style={timer < 5 ? { color: '#EE593B' } : {}}>
+                        <div className={style.timer} style={timer < 3 ? { color: '#EE593B' } : {}}>
                             {timer >= 10 ? `00:${timer}` : `00:0${timer}`}
                         </div>
                     )}
