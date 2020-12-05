@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/CockyJun/static/css/main.58e8ee88.chunk.css",
-    "main.js": "/CockyJun/static/js/main.cacba863.chunk.js",
-    "main.js.map": "/CockyJun/static/js/main.cacba863.chunk.js.map",
+    "main.css": "/CockyJun/static/css/main.f21efb21.chunk.css",
+    "main.js": "/CockyJun/static/js/main.d320a158.chunk.js",
+    "main.js.map": "/CockyJun/static/js/main.d320a158.chunk.js.map",
     "runtime-main.js": "/CockyJun/static/js/runtime-main.19602e9c.js",
     "runtime-main.js.map": "/CockyJun/static/js/runtime-main.19602e9c.js.map",
-    "static/js/2.c96d0c16.chunk.js": "/CockyJun/static/js/2.c96d0c16.chunk.js",
-    "static/js/2.c96d0c16.chunk.js.map": "/CockyJun/static/js/2.c96d0c16.chunk.js.map",
+    "static/js/2.d463e723.chunk.js": "/CockyJun/static/js/2.d463e723.chunk.js",
+    "static/js/2.d463e723.chunk.js.map": "/CockyJun/static/js/2.d463e723.chunk.js.map",
     "index.html": "/CockyJun/index.html",
-    "static/css/main.58e8ee88.chunk.css.map": "/CockyJun/static/css/main.58e8ee88.chunk.css.map",
-    "static/js/2.c96d0c16.chunk.js.LICENSE.txt": "/CockyJun/static/js/2.c96d0c16.chunk.js.LICENSE.txt"
+    "static/css/main.f21efb21.chunk.css.map": "/CockyJun/static/css/main.f21efb21.chunk.css.map",
+    "static/js/2.d463e723.chunk.js.LICENSE.txt": "/CockyJun/static/js/2.d463e723.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.19602e9c.js",
-    "static/js/2.c96d0c16.chunk.js",
-    "static/css/main.58e8ee88.chunk.css",
-    "static/js/main.cacba863.chunk.js"
+    "static/js/2.d463e723.chunk.js",
+    "static/css/main.f21efb21.chunk.css",
+    "static/js/main.d320a158.chunk.js"
   ]
 }
