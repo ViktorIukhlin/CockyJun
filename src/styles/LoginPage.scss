@@ -3,7 +3,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-
     border-radius: 10px;
     &__form {
         display: flex;
@@ -11,9 +10,12 @@
         justify-content: flex-end;
         align-items: center;
         height: 60%;
+
         & p {
             color: #5d656d;
-            margin-bottom: 40px;
+            margin: 40px 0;
+            font-size: 28px;
+            line-height: 33px;
         }
         & input {
             width: 60%;

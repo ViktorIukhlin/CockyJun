@@ -1,0 +1,49 @@
+.user-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    &__header {
+        height: 66px;
+        width: 100%;
+        background-color: #5d656d3b;
+        margin-bottom: 240px;
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+    }
+    &__img-box {
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 600px;
+        & input {
+            width: 60%;
+            border: none;
+            border: 1px solid #5d656d;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        & button {
+            width: 30%;
+            height: 40px;
+            background-color: #5d656d;
+            color: white;
+            border-radius: 8px;
+            border: 2px solid white;
+            margin: 30px 0 60px 0;
+            transition-duration: 0.5s;
+        }
+    }
+}

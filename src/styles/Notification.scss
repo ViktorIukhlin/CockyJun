@@ -1,0 +1,26 @@
+.notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .notification-box {
+        position: absolute;
+
+        height: 60px;
+        border-radius: 10px;
+        background-color: #07e897;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+        width: 40%;
+        top: -100px;
+        &.-active {
+            top: 10px;
+        }
+        & p {
+            color: #fff;
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+}

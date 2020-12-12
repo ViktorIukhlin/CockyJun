@@ -23,7 +23,8 @@ function App() {
 	const handleSubmit = (login, password) => {
 		setUser({
 			'login': login,
-			'password': password
+			'password': password,
+			'name': login,
 		})
 	}
 	console.log('user', user)
@@ -34,10 +35,10 @@ function App() {
 					{!user.login ? <LoginPage handleSubmit={handleSubmit} /> :
 						<>
 							<Redirect from='/' to='/startPage' />
-							<Route exact path='/startPage' render={() => <StartPage changeTimer={changeTimer} timerOn={timerOn} />} />
+							<Route exact path='/startPage' render={() => <StartPage changeTimer={changeTimer} timerOn={timerOn} user={user} setUser={setUser} />} />
 							<Route exact path='/questionsPage' render={() =>
 								<QuestionsPage
-									state={store.questions.sort(() => Math.random() - 0.5,)}
+									state={store.JavaScript.sort(() => Math.random() - 0.5,)}
 									countTimer={amountOfTime}
 									timerOn={timerOn}
 								/>}
