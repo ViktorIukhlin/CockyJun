@@ -6,6 +6,7 @@ const LoginPage = ({ handleSubmit }) => {
     const [password, setPassword] = useState('')
     return (
         <div className="login-page-container">
+            <img src={process.env.PUBLIC_URL + `/img/Logo.svg`} alt="" style={{ marginTop: '46px' }} />
             <div className="login-page-container__form">
                 <p>Вход</p>
                 <input

@@ -1,166 +1,182 @@
 {
-    "JavaScript": [
-        {
-            "id": 1,
-            "question": "Что выведется в консоль ? Объясните почему.",
-            "questionImg": "question1.jpg",
-            "answers": ["123", "[object Object]", "undefined", "456"],
-            "correctAnswer": "456"
+    "JavaScript": {
+        "description": {
+            "name": "Вопросы по JavaScript",
+            "img": "",
+            "lvl": "6",
+            "about": "Это набор вопросов проверяющий уровень начинающих разработчиков"
         },
-        {
-            "id": 2,
-            "question": "Чему равно foo.x ?",
-            "questionImg": "foox.png",
-            "answers": ["1", "2", "TypeError: foo is not a function", "undefined"],
-            "correctAnswer": "undefined"
+        "questions": [
+            {
+                "id": 1,
+                "question": "Что выведется в консоль ? Объясните почему.",
+                "questionImg": "question1.jpg",
+                "answers": ["123", "[object Object]", "undefined", "456"],
+                "correctAnswer": "456"
+            },
+            {
+                "id": 2,
+                "question": "Чему равно foo.x ?",
+                "questionImg": "foox.png",
+                "answers": ["1", "2", "TypeError: foo is not a function", "undefined"],
+                "correctAnswer": "undefined"
+            },
+            {
+                "id": 3,
+                "question": "Что выведет на консоль следующий скрипт?",
+                "questionImg": "question3.jpg",
+                "answers": ["0, 1 и 2", "1", "2", "3, 3 и 3"],
+                "correctAnswer": "3, 3 и 3"
+            },
+            {
+                "id": 4,
+                "question": "Что произойдет, если вы получите доступ к myVar и myConst до объявления?",
+                "questionImg": "question4.jpg",
+                "answers": [
+                    "Оба ReferenceError",
+                    "Оба undefined",
+                    "myVar-ReferenceError, myConst-undefined",
+                    "myVar-undefined, myConst-ReferenceError"
+                ],
+                "correctAnswer": "myVar-undefined, myConst-ReferenceError"
+            },
+            {
+                "id": 5,
+                "question": "Какое значение вернет arrayFromValue(10)?",
+                "questionImg": "question5.jpg",
+                "answers": ["10", "0", "[object Object]", "undefined"],
+                "correctAnswer": "undefined"
+            },
+            {
+                "id": 6,
+                "question": "Для чего используется оператор '&&'?",
+                "questionImg": "",
+                "answers": ["логическое или", "побитовое и", "побитовое или", "логическое и"],
+                "correctAnswer": "логическое и"
+            },
+            {
+                "id": 7,
+                "question": "Как узнать об использовании метода event.preventDefault()?",
+                "questionImg": "",
+                "answers": ["event.scoped", "event.originalTarget", "event.returnValue", "event.defaulPrevented"],
+                "correctAnswer": "event.defaulPrevented"
+            },
+            {
+                "id": 8,
+                "question": "Что такое цель события или целевой элемент (event.target)?",
+                "questionImg": "",
+                "answers": [
+                    "Это делегирование событий",
+                    "Это элемент, к которому прикреплен прослушиватель событий",
+                    "Это внешний слушатель",
+                    "Это элемент, в котором происходит событие, или элемент, вызвавший событие"
+                ],
+                "correctAnswer": "Это элемент, в котором происходит событие, или элемент, вызвавший событие"
+            },
+            {
+                "id": 9,
+                "question": "Что такое поднятие (Hoisting)?",
+                "questionImg": "",
+                "answers": [
+                    "Это директива ES5, которая заставляет весь наш код или код отдельной функции выполняться в строгом режиме",
+                    "Область видимости функции",
+                    "Это место, где (или откуда) мы имеем доступ к переменным или функциям",
+                    "Подъем переменной или функции в глобальную или функциональную области видимости"
+                ],
+                "correctAnswer": "Подъем переменной или функции в глобальную или функциональную области видимости"
+            },
+            {
+                "id": 10,
+                "question": "Для чего используется оператор '!!'?",
+                "questionImg": "",
+                "answers": [
+                    "Приводит значение справа от него к строке",
+                    "Приводит значение справа от него к false",
+                    "Приводит значение справа от него к нулю",
+                    "Приводит значение справа от него к логическому значению"
+                ],
+                "correctAnswer": "Приводит значение справа от него к логическому значению"
+            }
+        ]
+    },
+    "English": {
+        "description": {
+            "name": "Вопросы по Английскому языку для IT",
+            "img": "",
+            "lvl": "3",
+            "about": "Это набор вопросов проверяющий уровень ангийского языка начинающих разработчиков"
         },
-        {
-            "id": 3,
-            "question": "Что выведет на консоль следующий скрипт?",
-            "questionImg": "question3.jpg",
-            "answers": ["0, 1 и 2", "1", "2", "3, 3 и 3"],
-            "correctAnswer": "3, 3 и 3"
-        },
-        {
-            "id": 4,
-            "question": "Что произойдет, если вы получите доступ к myVar и myConst до объявления?",
-            "questionImg": "question4.jpg",
-            "answers": [
-                "Оба ReferenceError",
-                "Оба undefined",
-                "myVar-ReferenceError, myConst-undefined",
-                "myVar-undefined, myConst-ReferenceError"
-            ],
-            "correctAnswer": "myVar-undefined, myConst-ReferenceError"
-        },
-        {
-            "id": 5,
-            "question": "Какое значение вернет arrayFromValue(10)?",
-            "questionImg": "question5.jpg",
-            "answers": ["10", "0", "[object Object]", "undefined"],
-            "correctAnswer": "undefined"
-        },
-        {
-            "id": 6,
-            "question": "Для чего используется оператор '&&'?",
-            "questionImg": "",
-            "answers": ["логическое или", "побитовое и", "побитовое или", "логическое и"],
-            "correctAnswer": "логическое и"
-        },
-        {
-            "id": 7,
-            "question": "Как узнать об использовании метода event.preventDefault()?",
-            "questionImg": "",
-            "answers": ["event.scoped", "event.originalTarget", "event.returnValue", "event.defaulPrevented"],
-            "correctAnswer": "event.defaulPrevented"
-        },
-        {
-            "id": 8,
-            "question": "Что такое цель события или целевой элемент (event.target)?",
-            "questionImg": "",
-            "answers": [
-                "Это делегирование событий",
-                "Это элемент, к которому прикреплен прослушиватель событий",
-                "Это внешний слушатель",
-                "Это элемент, в котором происходит событие, или элемент, вызвавший событие"
-            ],
-            "correctAnswer": "Это элемент, в котором происходит событие, или элемент, вызвавший событие"
-        },
-        {
-            "id": 9,
-            "question": "Что такое поднятие (Hoisting)?",
-            "questionImg": "",
-            "answers": [
-                "Это директива ES5, которая заставляет весь наш код или код отдельной функции выполняться в строгом режиме",
-                "Область видимости функции",
-                "Это место, где (или откуда) мы имеем доступ к переменным или функциям",
-                "Подъем переменной или функции в глобальную или функциональную области видимости"
-            ],
-            "correctAnswer": "Подъем переменной или функции в глобальную или функциональную области видимости"
-        },
-        {
-            "id": 10,
-            "question": "Для чего используется оператор '!!'?",
-            "questionImg": "",
-            "answers": [
-                "Приводит значение справа от него к строке",
-                "Приводит значение справа от него к false",
-                "Приводит значение справа от него к нулю",
-                "Приводит значение справа от него к логическому значению"
-            ],
-            "correctAnswer": "Приводит значение справа от него к логическому значению"
-        }
-    ],
-    "English": [
-        {
-            "id": 1,
-            "question": "Attorney",
-            "questionImg": "",
-            "answers": ["Диетолог", "Водка", "Поворот", "Адвокат"],
-            "correctAnswer": "Адвокат"
-        },
-        {
-            "id": 2,
-            "question": "Bring",
-            "questionImg": "",
-            "answers": ["Диалог", "Праздник с гуляньем", "Брик", "Приносить"],
-            "correctAnswer": "Приносить"
-        },
-        {
-            "id": 3,
-            "question": "Hesitate",
-            "questionImg": "",
-            "answers": ["Добиться", "Биолог", "Бармен", "Колебаться"],
-            "correctAnswer": "Колебаться"
-        },
-        {
-            "id": 4,
-            "question": "Janitor",
-            "questionImg": "",
-            "answers": ["Заместитель", "Прицветник", "Развратник", "Привратник"],
-            "correctAnswer": "Привратник"
-        },
-        {
-            "id": 5,
-            "question": "Through",
-            "questionImg": "",
-            "answers": ["Архитектор", "Бармен", "Тереза", "Через; С помощью"],
-            "correctAnswer": "Через; С помощью"
-        },
-        {
-            "id": 6,
-            "question": "So that",
-            "questionImg": "",
-            "answers": ["Бухгалтер", "Политик", "Космонавт", "При условии"],
-            "correctAnswer": "При условии"
-        },
-        {
-            "id": 7,
-            "question": "Cabby",
-            "questionImg": "",
-            "answers": ["Повар", "Токарь", "IT специалист", "Таксист"],
-            "correctAnswer": "Таксист"
-        },
-        {
-            "id": 8,
-            "question": "Cashier",
-            "questionImg": "",
-            "answers": ["Фрезеровщик", "Токарь", "Повар", "Кассир"],
-            "correctAnswer": "Кассир"
-        },
-        {
-            "id": 9,
-            "question": "Charwoman",
-            "questionImg": "",
-            "answers": ["Кассир", "Повар", "Менеджер", "Уборщица"],
-            "correctAnswer": "Уборщица"
-        },
-        {
-            "id": 10,
-            "question": "Cleaner",
-            "questionImg": "",
-            "answers": ["Токарь", "Повар", "Менеджер", "Уборщик"],
-            "correctAnswer": "Уборщик"
-        }
-    ]
+        "questions": [
+            {
+                "id": 1,
+                "question": "Attorney",
+                "questionImg": "",
+                "answers": ["Диетолог", "Водка", "Поворот", "Адвокат"],
+                "correctAnswer": "Адвокат"
+            },
+            {
+                "id": 2,
+                "question": "Bring",
+                "questionImg": "",
+                "answers": ["Диалог", "Праздник с гуляньем", "Брик", "Приносить"],
+                "correctAnswer": "Приносить"
+            },
+            {
+                "id": 3,
+                "question": "Hesitate",
+                "questionImg": "",
+                "answers": ["Добиться", "Биолог", "Бармен", "Колебаться"],
+                "correctAnswer": "Колебаться"
+            },
+            {
+                "id": 4,
+                "question": "Janitor",
+                "questionImg": "",
+                "answers": ["Заместитель", "Прицветник", "Развратник", "Привратник"],
+                "correctAnswer": "Привратник"
+            },
+            {
+                "id": 5,
+                "question": "Through",
+                "questionImg": "",
+                "answers": ["Архитектор", "Бармен", "Тереза", "Через; С помощью"],
+                "correctAnswer": "Через; С помощью"
+            },
+            {
+                "id": 6,
+                "question": "So that",
+                "questionImg": "",
+                "answers": ["Бухгалтер", "Политик", "Космонавт", "При условии"],
+                "correctAnswer": "При условии"
+            },
+            {
+                "id": 7,
+                "question": "Cabby",
+                "questionImg": "",
+                "answers": ["Повар", "Токарь", "IT специалист", "Таксист"],
+                "correctAnswer": "Таксист"
+            },
+            {
+                "id": 8,
+                "question": "Cashier",
+                "questionImg": "",
+                "answers": ["Фрезеровщик", "Токарь", "Повар", "Кассир"],
+                "correctAnswer": "Кассир"
+            },
+            {
+                "id": 9,
+                "question": "Charwoman",
+                "questionImg": "",
+                "answers": ["Кассир", "Повар", "Менеджер", "Уборщица"],
+                "correctAnswer": "Уборщица"
+            },
+            {
+                "id": 10,
+                "question": "Cleaner",
+                "questionImg": "",
+                "answers": ["Токарь", "Повар", "Менеджер", "Уборщик"],
+                "correctAnswer": "Уборщик"
+            }
+        ]
+    }
 }

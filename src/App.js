@@ -38,7 +38,7 @@ function App() {
 							<Route exact path='/startPage' render={() => <StartPage changeTimer={changeTimer} timerOn={timerOn} user={user} setUser={setUser} />} />
 							<Route exact path='/questionsPage' render={() =>
 								<QuestionsPage
-									state={store.JavaScript.sort(() => Math.random() - 0.5,)}
+									state={store.JavaScript.questions.sort(() => Math.random() - 0.5,)}
 									countTimer={amountOfTime}
 									timerOn={timerOn}
 								/>}
