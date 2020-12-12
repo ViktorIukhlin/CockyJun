@@ -14,9 +14,9 @@ const UserModal = ({ onClose, onSubmit, user, notification }) => {
                 </div>
             </div>
             <div className="user-modal__form">
-                <input name="name" placeholder="Имя" autocomplete="off" value={name} onChange={e => setName(e.target.value)} />
-                <input name="age" placeholder="Возраст" autocomplete="off" value={age} onChange={e => setAge(e.target.value)} />
-                <input name="city" placeholder="Город" autocomplete="off" value={city} onChange={e => setCity(e.target.value)} />
+                <input name="name" placeholder="Имя" autoComplete="off" value={name} onChange={e => setName(e.target.value)} />
+                <input name="age" placeholder="Возраст" autoComplete="off" value={age} onChange={e => setAge(e.target.value)} />
+                <input name="city" placeholder="Город" autoComplete="off" value={city} onChange={e => setCity(e.target.value)} />
                 <button type="button" onClick={() => onSubmit(name, age, city)}>
                     Сохранить
                 </button>

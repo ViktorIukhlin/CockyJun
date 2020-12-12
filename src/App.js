@@ -5,7 +5,6 @@ import './App.scss';
 import LoginPage from './components/pages/LoginPage';
 import QuestionsPage from './components/QuestionsPage/QuestionsPage';
 import StartPage from './components/StartPage/StartPage';
-import store from './JSON/bd.json'
 
 function App() {
 	const [amountOfTime, setAmountOfTime] = useState(6)
@@ -35,14 +34,19 @@ function App() {
 					{!user.login ? <LoginPage handleSubmit={handleSubmit} /> :
 						<>
 							<Redirect from='/' to='/startPage' />
-							<Route exact path='/startPage' render={() => <StartPage changeTimer={changeTimer} timerOn={timerOn} user={user} setUser={setUser} />} />
-							<Route exact path='/questionsPage' render={() =>
-								<QuestionsPage
-									state={store.JavaScript.questions.sort(() => Math.random() - 0.5,)}
-									countTimer={amountOfTime}
+							<Route
+								exact path='/startPage'
+								render={() => <StartPage
+									amountOfTime={amountOfTime}
 									timerOn={timerOn}
-								/>}
-							/> </>}
+									changeTimer={changeTimer}
+									user={user}
+									setUser={setUser}
+								/>
+								}
+							/>
+						</>
+					}
 				</div>
 			</div>
 		</HashRouter>

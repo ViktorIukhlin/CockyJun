@@ -13,14 +13,14 @@ const LoginPage = ({ handleSubmit }) => {
                     type="login"
                     name="login"
                     placeholder="Введите логин"
-                    autocomplete="off"
+                    autoComplete="off"
                     value={login}
                     onChange={e => setLogin(e.target.value)}
                 />
                 <input
                     type="password"
                     name="password"
-                    autocomplete="off"
+                    autoComplete="off"
                     placeholder="Введите пароль"
                     value={password}
                     onChange={e => setPassword(e.target.value)}

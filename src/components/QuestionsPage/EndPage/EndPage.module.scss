@@ -1,4 +1,4 @@
-.containerCopy{
+.containerCopy {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,8 +6,8 @@
     font-size: 22px;
     line-height: 30px;
     height: 100%;
-  }
-  .buttonReturn{
+}
+.buttonReturn {
     height: auto;
     min-height: 40px;
     min-width: 120px;
@@ -21,8 +21,9 @@
     align-items: center;
     justify-content: center;
     margin: 20px 20px 40px 20px;
-    &:hover{
-      color: #2587E8;
-      background-color: #EBF4FD;
+    cursor: pointer;
+    &:hover {
+        color: #2587e8;
+        background-color: #ebf4fd;
     }
-  }
+}

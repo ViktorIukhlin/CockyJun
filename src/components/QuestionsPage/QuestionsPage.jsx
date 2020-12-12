@@ -5,7 +5,7 @@ import Question from './Question/Question'
 import style from './QuestionsPage.module.scss'
 import ResultWindow from './ResultWindow/ResultWindow'
 
-const QuestionsPage = ({ state, countTimer, timerOn }) => {
+const QuestionsPage = ({ state, countTimer, timerOn, onClose }) => {
     const [counter, setCounter] = useState(0)
     const [resultWindow, setResultWindow] = useState(false)
     const [answerFromPlayer, setAnswerFromPlayer] = useState('')
@@ -52,7 +52,7 @@ const QuestionsPage = ({ state, countTimer, timerOn }) => {
         <>
             <ProgressBar currentSize={allQuestions} size={state.length} />
             {allQuestions === state.length ? (
-                <EndPage counter={allQuestions} wrongAnswers={wrongAnswers} />
+                <EndPage counter={allQuestions} wrongAnswers={wrongAnswers} onClose={onClose} />
             ) : resultWindow || timeOff ? (
                 <ResultWindow
                     answer={answerFromPlayer}
