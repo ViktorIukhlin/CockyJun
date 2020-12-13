@@ -7,6 +7,20 @@ from django.contrib import auth
 class Languages(models.Model):
     name = models.CharField(verbose_name='Имя', max_length=300)
 
+    def __str__(self):
+        return self.name
+
+
+class DifficultyLevel(models.Model):
+    name = models.CharField(verbose_name='Название', max_length=300)
+
+    class Meta:
+        verbose_name = 'Уровень сложности'
+        verbose_name_plural = 'Уровни сложности'
+
+    def __str__(self):
+        return self.name
+
 
 class UserProfile(models.Model):
     user = models.OneToOneField(auth.get_user_model(), on_delete=models.CASCADE, related_name='profile',
@@ -38,6 +52,7 @@ class Question(models.Model):
                                   verbose_name='Автор')
     published = models.BooleanField(default=False, verbose_name='Опубликован')
     created_at = models.DateTimeField(verbose_name='Дата создания', auto_now=True, editable=False)
+    difficult = models.OneToOneField(DifficultyLevel, null=True, on_delete=models.CASCADE, verbose_name='Уровень сложности')
 
     class Meta:
         verbose_name = 'Вопрос'
@@ -45,3 +60,13 @@ class Question(models.Model):
 
     def __str__(self):
         return self.question
+
+
+class QuestionGroup(models.Model):
+    name = models.CharField(verbose_name='Название теста', max_length=300)
+    created = models.DateTimeField(verbose_name='Дата создания', editable=False, auto_now=True)
+    questions = models.ManyToManyField(Question, related_name='questions', verbose_name='Вопросы')
+
+    class Meta:
+        verbose_name = 'Тест'
+        verbose_name_plural = 'Тесты'
